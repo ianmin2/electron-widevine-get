@@ -1,15 +1,14 @@
-# @electron/get
+# electron-widevine-get
 
-> Download Electron release artifacts
+> Download Electron WideVine release artifacts
 
-[![CircleCI](https://circleci.com/gh/electron/get.svg?style=svg)](https://circleci.com/gh/electron/get)
 
 ## Usage
 
 ### Simple: Downloading an Electron Binary ZIP
 
 ```typescript
-import { download } from '@electron/get';
+import { download } from 'electron-widevine-get';
 
 // NB: Use this syntax within an async function, Node does not have support for
 //     top-level await as of Node 12.
@@ -20,7 +19,7 @@ const zipFilePath = await download('4.0.4');
 
 
 ```typescript
-import { downloadArtifact } from '@electron/get';
+import { downloadArtifact } from 'electron-widevine-get';
 
 // NB: Use this syntax within an async function, Node does not have support for
 //     top-level await as of Node 12.
@@ -48,7 +47,7 @@ available:
 Anatomy of a download URL, in terms of `mirrorOptions`:
 
 ```
-https://github.com/electron/electron/releases/download/v4.0.4/electron-v4.0.4-linux-x64.zip
+https://github.com/electron/electron/releases/download/v9.0.4/electron-v9.0.4-wvvmp-linux-x64.zip
 |                                                     |       |                           |
 -------------------------------------------------------       -----------------------------
                         |                                                   |
@@ -61,7 +60,7 @@ https://github.com/electron/electron/releases/download/v4.0.4/electron-v4.0.4-li
 Example:
 
 ```typescript
-import { download } from '@electron/get';
+import { download } from 'electron-widevine-get';
 
 const zipFilePath = await download('4.0.4', {
   mirrorOptions: {
